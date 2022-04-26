@@ -1,0 +1,376 @@
+<html>
+<head> 
+    <link rel="stylesheet" href="randemoji.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Supermercado+One&display=swap" rel="stylesheet">
+    <center><title> Read My Fortune </title></center>
+    </head>
+<script>
+    
+function getRandomImage() {
+//declare an array to store the images
+var randomImage = new Array();
+
+//insert the URL of images in array
+    randomImage[0] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/grinning-face_1f600.png";
+    randomImage[1] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/grinning-face-with-big-eyes_1f603.png";
+    randomImage[2] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/grinning-face-with-smiling-eyes_1f604.png";
+    randomImage[3] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/beaming-face-with-smiling-eyes_1f601.png";
+    randomImage[4] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/grinning-squinting-face_1f606.png";
+    randomImage[5] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/grinning-face-with-sweat_1f605.png";
+    randomImage[6] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/rolling-on-the-floor-laughing_1f923.png";
+    randomImage[7] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/face-with-tears-of-joy_1f602.png";
+    randomImage[8] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/slightly-smiling-face_1f642.png";
+    randomImage[9] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/upside-down-face_1f643.png";
+    randomImage[10] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/winking-face_1f609.png";
+    randomImage[11] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/smiling-face-with-smiling-eyes_1f60a.png";
+    randomImage[12] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/smiling-face-with-halo_1f607.png";
+    randomImage[13] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/smiling-face-with-hearts_1f970.png";
+    randomImage[14] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/smiling-face-with-heart-eyes_1f60d.png";
+    randomImage[15] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/star-struck_1f929.png";
+    randomImage[16] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/face-blowing-a-kiss_1f618.png";
+    randomImage[17] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/kissing-face_1f617.png";
+    randomImage[18] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/smiling-face_263a-fe0f.png";
+    randomImage[19] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/kissing-face-with-closed-eyes_1f61a.png";
+    randomImage[20] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/kissing-face-with-smiling-eyes_1f619.png";
+    randomImage[21] ="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/smiling-face-with-tear_1f972.png";
+    randomImage[22] ="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/face-savoring-food_1f60b.png";
+    randomImage[23] ="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/face-with-tongue_1f61b.png";
+    randomImage[24] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/winking-face-with-tongue_1f61c.png";
+    randomImage[25] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/zany-face_1f92a.png";
+    randomImage[26] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/squinting-face-with-tongue_1f61d.png";
+    randomImage[27] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/money-mouth-face_1f911.png";
+    randomImage[28] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/hugging-face_1f917.png";
+    randomImage[29] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/face-with-hand-over-mouth_1f92d.png";
+    randomImage[30] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/shushing-face_1f92b.png";
+    randomImage[31] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/thinking-face_1f914.png";
+    randomImage[32] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/zipper-mouth-face_1f910.png";
+    randomImage[33] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/face-with-raised-eyebrow_1f928.png";
+    randomImage[34] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/neutral-face_1f610.png";
+    randomImage[35] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/expressionless-face_1f611.png";
+    randomImage[36] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/smirking-face_1f60f.png";
+    randomImage[37] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/unamused-face_1f612.png";
+    randomImage[38] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/face-with-rolling-eyes_1f644.png";
+    randomImage[39] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/grimacing-face_1f62c.png";
+    randomImage[40] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-exhaling_1f62e-200d-1f4a8.png";
+    randomImage[41] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/relieved-face_1f60c.png";
+    randomImage[42] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pensive-face_1f614.png";
+    randomImage[43] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sleepy-face_1f62a.png";
+    randomImage[44] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/drooling-face_1f924.png";
+    randomImage[45] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sleeping-face_1f634.png";
+    randomImage[46] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-with-medical-mask_1f637.png";
+    randomImage[47] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-with-thermometer_1f912.png";
+    randomImage[48] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-with-head-bandage_1f915.png";
+    randomImage[49] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/nauseated-face_1f922.png";
+    randomImage[50] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-vomiting_1f92e.png";
+    randomImage[51] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sneezing-face_1f927.png";
+    randomImage[52] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/hot-face_1f975.png";
+    randomImage[53] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cold-face_1f976.png";
+    randomImage[54] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/woozy-face_1f974.png";
+    randomImage[55] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-with-spiral-eyes_1f635-200d-1f4ab.png";
+    randomImage[56] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/exploding-head_1f92f.png";
+    randomImage[57] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cowboy-hat-face_1f920.png";
+    randomImage[58] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/partying-face_1f973.png";
+    randomImage[59] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/smiling-face-with-sunglasses_1f60e.png";
+    randomImage[60] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-with-monocle_1f9d0.png";
+    randomImage[61] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/frowning-face_2639-fe0f.png";
+    randomImage[62] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-with-open-mouth_1f62e.png";
+    randomImage[63] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/flushed-face_1f633.png";
+    randomImage[64] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pleading-face_1f97a.png";
+    randomImage[65] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/frowning-face-with-open-mouth_1f626.png";
+    randomImage[66] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/fearful-face_1f628.png";
+    randomImage[67] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/anxious-face-with-sweat_1f630.png";
+    randomImage[68] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sad-but-relieved-face_1f625.png";
+    randomImage[69] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/crying-face_1f622.png";
+    randomImage[70] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/loudly-crying-face_1f62d.png";
+    randomImage[71] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-screaming-in-fear_1f631.png";
+    randomImage[72] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/confounded-face_1f616.png";
+    randomImage[73] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/persevering-face_1f623.png";
+    randomImage[74] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/disappointed-face_1f61e.png";
+    randomImage[75] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/downcast-face-with-sweat_1f613.png";
+    randomImage[76] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/weary-face_1f629.png";
+    randomImage[77] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/tired-face_1f62b.png";
+    randomImage[78] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/yawning-face_1f971.png";
+    randomImage[79] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-with-steam-from-nose_1f624.png";
+    randomImage[80] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pouting-face_1f621.png";
+    randomImage[81] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/angry-face_1f620.png";
+    randomImage[82] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/face-with-symbols-on-mouth_1f92c.png";
+    randomImage[83] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/smiling-face-with-horns_1f608.png";
+    randomImage[84] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/angry-face-with-horns_1f47f.png";
+    randomImage[85] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pile-of-poo_1f4a9.png";
+    randomImage[86] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/clown-face_1f921.png";
+    randomImage[87] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/ogre_1f479.png";
+    randomImage[88] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/goblin_1f47a.png";
+    randomImage[89] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/ghost_1f47b.png";
+    randomImage[90] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/alien_1f47d.png";
+    randomImage[91] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/alien-monster_1f47e.png";
+    randomImage[92] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/grinning-cat_1f63a.png";
+    randomImage[93] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/grinning-cat-with-smiling-eyes_1f638.png";
+    randomImage[94] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cat-with-tears-of-joy_1f639.png";
+    randomImage[95] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/smiling-cat-with-heart-eyes_1f63b.png";
+    randomImage[96] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cat-with-wry-smile_1f63c.png";
+    randomImage[97] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/kissing-cat_1f63d.png";
+    randomImage[98] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/weary-cat_1f640.png";
+    randomImage[99] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/crying-cat_1f63f.png";
+    randomImage[100] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pouting-cat_1f63e.png";
+    randomImage[101] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/see-no-evil-monkey_1f648.png";
+    randomImage[102] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/hear-no-evil-monkey_1f649.png";
+    randomImage[103] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/speak-no-evil-monkey_1f64a.png";
+    randomImage[104] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/kiss-mark_1f48b.png";
+    randomImage[105] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/love-letter_1f48c.png";
+    randomImage[106] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/heart-with-arrow_1f498.png";
+    randomImage[107] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/heart-with-ribbon_1f49d.png";
+    randomImage[108] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sparkling-heart_1f496.png";
+    randomImage[109] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/growing-heart_1f497.png";
+    randomImage[110] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/beating-heart_1f493.png";
+    randomImage[111] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/revolving-hearts_1f49e.png";
+    randomImage[112] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/broken-heart_1f494.png";
+    randomImage[113] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/heart-on-fire_2764-fe0f-200d-1f525.png";
+    randomImage[114] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/mending-heart_2764-fe0f-200d-1fa79.png";
+    randomImage[115] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/red-heart_2764-fe0f.png";
+    randomImage[116] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/orange-heart_1f9e1.png";
+    randomImage[117] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/yellow-heart_1f49b.png";
+    randomImage[118] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/green-heart_1f49a.png";
+    randomImage[119] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/blue-heart_1f499.png";
+    randomImage[120] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/purple-heart_1f49c.png";
+    randomImage[121] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/brown-heart_1f90e.png";
+    randomImage[122] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/black-heart_1f5a4.png";
+    randomImage[123] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/white-heart_1f90d.png";
+    randomImage[124] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/hundred-points_1f4af.png";
+    randomImage[125] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/anger-symbol_1f4a2.png";
+    randomImage[126] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/collision_1f4a5.png";
+    randomImage[127] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/dizzy_1f4ab.png";
+    randomImage[128] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sweat-droplets_1f4a6.png";
+    randomImage[129] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/thought-balloon_1f4ad.png";
+    randomImage[130] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/waving-hand_1f44b.png";
+    randomImage[131] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/hand-with-fingers-splayed_1f590-fe0f.png";
+    randomImage[132] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/raised-hand_270b.png";
+    randomImage[133] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/vulcan-salute_1f596.png";
+    randomImage[134] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/ok-hand_1f44c.png";
+    randomImage[135] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pinched-fingers_1f90c.png";
+    randomImage[136] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pinching-hand_1f90f.png";
+    randomImage[137] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/victory-hand_270c-fe0f.png";
+    randomImage[138] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/crossed-fingers_1f91e.png";
+    randomImage[139] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/love-you-gesture_1f91f.png";
+    randomImage[140] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sign-of-the-horns_1f918.png";
+    randomImage[141] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/call-me-hand_1f919.png";
+    randomImage[142] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/middle-finger_1f595.png";
+    randomImage[143] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/thumbs-up_1f44d.png";
+    randomImage[144] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/thumbs-down_1f44e.png";
+    randomImage[145] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/raised-fist_270a.png";
+    randomImage[146] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/oncoming-fist_1f44a.png";
+    randomImage[147] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/clapping-hands_1f44f.png";
+    randomImage[148] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/raising-hands_1f64c.png";
+    randomImage[149] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/open-hands_1f450.png";
+    randomImage[150] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/handshake_1f91d.png";
+    randomImage[151] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/folded-hands_1f64f.png";
+    randomImage[152] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/writing-hand_270d-fe0f.png";
+    randomImage[153] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/nail-polish_1f485.png";
+    randomImage[154] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/flexed-biceps_1f4aa.png";
+    randomImage[155] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/tongue_1f445.png";
+    randomImage[156] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/baby_light-skin-tone_1f476-1f3fb_1f3fb.png";
+    randomImage[157] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/man-frowning_1f64d-200d-2642-fe0f.png";
+    randomImage[158] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/woman-frowning_1f64d-200d-2640-fe0f.png";
+    randomImage[159] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/man-gesturing-no_1f645-200d-2642-fe0f.png";
+    randomImage[160] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/woman-gesturing-no_1f645-200d-2640-fe0f.png";
+    randomImage[161] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/man-gesturing-ok_1f646-200d-2642-fe0f.png";
+    randomImage[162] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/woman-gesturing-ok_1f646-200d-2640-fe0f.png";
+    randomImage[163] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/man-bowing_1f647-200d-2642-fe0f.png";
+    randomImage[164] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/woman-bowing_1f647-200d-2640-fe0f.png";
+    randomImage[165] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/man-facepalming_1f926-200d-2642-fe0f.png";
+    randomImage[166] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/woman-facepalming_1f926-200d-2640-fe0f.png";
+    randomImage[167] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/man-shrugging_1f937-200d-2642-fe0f.png";
+    randomImage[168] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/woman-shrugging_1f937-200d-2640-fe0f.png";
+    randomImage[169] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/woman-dancing_1f483.png";
+    randomImage[170] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/woman-in-lotus-position_1f9d8-200d-2640-fe0f.png";
+    randomImage[171] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/monkey-face_1f435.png";
+    randomImage[172] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/gorilla_1f98d.png";
+    randomImage[173] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/orangutan_1f9a7.png";
+    randomImage[174] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/dog-face_1f436.png";
+    randomImage[175] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/wolf_1f43a.png";
+    randomImage[176] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/fox_1f98a.png";
+    randomImage[177] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/raccoon_1f99d.png";
+    randomImage[178] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cat-face_1f431.png";
+    randomImage[179] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cat_1f408.png";
+    randomImage[180] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/black-cat_1f408-200d-2b1b.png";
+    randomImage[181] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/lion_1f981.png";
+    randomImage[182] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/tiger-face_1f42f.png";
+    randomImage[183] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/horse-face_1f434.png";
+    randomImage[184] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/unicorn_1f984.png";
+    randomImage[185] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cow-face_1f42e.png";
+    randomImage[186] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pig-face_1f437.png";
+    randomImage[187] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/mouse-face_1f42d.png";
+    randomImage[188] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/mouse_1f401.png";
+    randomImage[189] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/rat_1f400.png";
+    randomImage[190] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/hamster_1f439.png";
+    randomImage[191] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/rabbit-face_1f430.png";
+    randomImage[192] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/bat_1f987.png";
+    randomImage[193] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/bear_1f43b.png";
+    randomImage[194] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/koala_1f428.png";
+    randomImage[195] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/panda_1f43c.png";
+    randomImage[196] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sloth_1f9a5.png";
+    randomImage[197] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/otter_1f9a6.png";
+    randomImage[198] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/paw-prints_1f43e.png";
+    randomImage[199] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/hatching-chick_1f423.png";
+    randomImage[200] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/dove_1f54a-fe0f.png";
+    randomImage[201] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/penguin_1f427.png";
+    randomImage[202] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/duck_1f986.png";
+    randomImage[203] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/swan_1f9a2.png";
+    randomImage[204] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/owl_1f989.png";
+    randomImage[205] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/flamingo_1f9a9.png";
+    randomImage[206] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/frog_1f438.png";
+    randomImage[207] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/turtle_1f422.png";
+    randomImage[208] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/snake_1f40d.png";
+    randomImage[209] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/dragon-face_1f432.png";
+    randomImage[210] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sauropod_1f995.png";
+    randomImage[211] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/t-rex_1f996.png";
+    randomImage[212] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/spouting-whale_1f433.png";
+    randomImage[213] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/dolphin_1f42c.png";
+    randomImage[214] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/blowfish_1f421.png";
+    randomImage[215] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/octopus_1f419.png";
+    randomImage[216] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/butterfly_1f98b.png";
+    randomImage[217] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/bug_1f41b.png";
+    randomImage[218] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/honeybee_1f41d.png";
+    randomImage[219] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/spider-web_1f578-fe0f.png";
+    randomImage[220] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/microbe_1f9a0.png";
+    randomImage[221] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/bouquet_1f490.png";
+    randomImage[222] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cherry-blossom_1f338.png";
+    randomImage[223] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/white-flower_1f4ae.png";
+    randomImage[224] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/rose_1f339.png";
+    randomImage[225] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/wilted-flower_1f940.png";
+    randomImage[226] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/hibiscus_1f33a.png";
+    randomImage[227] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sunflower_1f33b.png";
+    randomImage[228] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/seedling_1f331.png";
+    randomImage[229] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/potted-plant_1fab4.png";
+    randomImage[230] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/evergreen-tree_1f332.png";
+    randomImage[231] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/four-leaf-clover_1f340.png";
+    randomImage[232] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/shamrock_2618-fe0f.png";
+    randomImage[233] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/fallen-leaf_1f342.png";
+    randomImage[234] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/grapes_1f347.png";
+    randomImage[235] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/melon_1f348.png";
+    randomImage[236] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/watermelon_1f349.png";
+    randomImage[237] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/tangerine_1f34a.png";
+    randomImage[238] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/lemon_1f34b.png";
+    randomImage[239] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/banana_1f34c.png";
+    randomImage[240] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pineapple_1f34d.png";
+    randomImage[241] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/mango_1f96d.png";
+    randomImage[242] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/red-apple_1f34e.png";
+    randomImage[243] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pear_1f350.png";
+    randomImage[244] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/peach_1f351.png";
+    randomImage[245] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cherries_1f352.png";
+    randomImage[246] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/strawberry_1f353.png";
+    randomImage[247] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/blueberries_1fad0.png";
+    randomImage[248] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/kiwi-fruit_1f95d.png";
+    randomImage[249] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/tomato_1f345.png";
+    randomImage[250] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/coconut_1f965.png";
+    randomImage[251] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/avocado_1f951.png";
+    randomImage[252] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/eggplant_1f346.png";
+    randomImage[253] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/potato_1f954.png";
+    randomImage[254] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/hot-pepper_1f336-fe0f.png";
+    randomImage[255] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/peanuts_1f95c.png";
+    randomImage[256] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pancakes_1f95e.png";
+    randomImage[257] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/waffle_1f9c7.png";
+    randomImage[258] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/poultry-leg_1f357.png";
+    randomImage[259] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cut-of-meat_1f969.png";
+    randomImage[260] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/pizza_1f355.png";
+    randomImage[261] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/taco_1f32e.png";
+    randomImage[262] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/popcorn_1f37f.png";
+    randomImage[263] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/doughnut_1f369.png";
+    randomImage[264] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cookie_1f36a.png";
+    randomImage[265] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/birthday-cake_1f382.png";
+    randomImage[266] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cupcake_1f9c1.png";
+    randomImage[267] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/chocolate-bar_1f36b.png";
+    randomImage[268] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/lollipop_1f36d.png";
+    randomImage[269] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/clinking-beer-mugs_1f37b.png";
+    randomImage[270] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/bubble-tea_1f9cb.png";
+    randomImage[271] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/camping_1f3d5-fe0f.png";
+    randomImage[272] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/beach-with-umbrella_1f3d6-fe0f.png";
+    randomImage[273] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/tokyo-tower_1f5fc.png";
+    randomImage[274] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/statue-of-liberty_1f5fd.png";
+    randomImage[275] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/carousel-horse_1f3a0.png";
+    randomImage[276] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/roller-skate_1f6fc.png";
+    randomImage[277] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/new-moon-face_1f31a.png";
+    randomImage[278] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/star_2b50.png";
+    randomImage[279] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/cloud-with-rain_1f327-fe0f.png";
+    randomImage[280] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/high-voltage_26a1.png";
+    randomImage[281] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/snowman_2603-fe0f.png";
+    randomImage[282] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/jack-o-lantern_1f383.png";
+    randomImage[283] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/christmas-tree_1f384.png";
+    randomImage[284] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/sparkles_2728.png";
+    randomImage[285] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/party-popper_1f389.png";
+    randomImage[286] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/wrapped-gift_1f381.png";
+    randomImage[287] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/ticket_1f3ab.png";
+    randomImage[288] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/video-game_1f3ae.png";
+    randomImage[289] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/artist-palette_1f3a8.png";
+    randomImage[290] = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/apple/285/musical-note_1f3b5.png";
+
+//loop to display # of emojis
+   for (let i=0; i< 3; i++) {
+
+//generate a number and provide to the image to generate randomly
+var number = Math.floor(Math.random()*randomImage.length);
+
+//print the images generated by a random number
+document.getElementById("emoji").innerHTML += '<img src="'+ randomImage[number] +'" " style="width:65px" />';
+}
+    }
+
+function hide() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('fortunecookie')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID')
+                    .style.display = "none";
+        }   
+    
+function show() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('btnRefresh')
+                    .style.display = "block";
+    
+    document.getElementById('opencookie')
+                    .style.display = "block";
+        }    
+    
+</script>
+    
+<body>
+    
+<div class="scroll-left">
+<p style = "font-family: sans-serif">&#11088&#11088&#11088&#11088&#11088 Absolutely love this!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#11088&#11088&#11088&#11088&#11088 It told me to buy another cat... So I did. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#11088&#11088&#11088Only 3 stars because your fate is sealed when your prophecy is read!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#11088&#11088&#11088&#11088&#11088 Hilarious!</p>
+</div>
+<br>
+<center><h1> Today's Fortune </h1></center>
+
+<br>
+    
+    
+ <center>   <img id="fortunecookie" src= "cookie.gif" style = "width: 400px"> </center>
+  <br>
+    
+ <center><img id="opencookie" class="opencookie" src= "opencookie.png" style = "display: none;"></center>
+  <br>
+    
+<center>
+    <button class="button1" onclick="hide(), getRandomImage(), show()" id="btnID">
+        Open Cookie
+    </button> </center>
+    
+    <center><span id="emoji" class="emoji"> </span></center>
+    
+    <br><br><br>
+    <center>
+    <button class="button2" id="btnRefresh" style="display: none" onClick="window.location.reload();">New Cookie</button>
+    </center>
+    
+    </body>  
+</html>
+
+ 

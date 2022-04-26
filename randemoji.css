@@ -1,0 +1,80 @@
+html{
+    background-image: url(bg.jpg);   
+}
+
+.scroll-left {
+ height: 35px;	
+ overflow: hidden;
+ position: relative;
+ background: #F67280;
+ color: white;
+ margin-top:-8px;
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 35px;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%); 		
+ }
+ 100% {
+ transform: translateX(-100%); 
+ }
+}
+
+#fortunecookie{
+    display:initial;
+}
+
+h1{
+    font-family: 'Supermercado One', cursive;
+    font-size: 45px
+}
+
+.button1{
+    background-color: #90DCD0;
+    color: #383838;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border:none;
+    font-family: 'Supermercado One', cursive;
+}
+
+.button2{
+    color:black;
+    background-color: 77DD76;
+    color: #383838;
+    font-family: 'Supermercado One', cursive;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 152px;
+}
+
+
+.opencookie{
+    z-index:-1;
+    display: flex;
+    max-height: 300px;
+    margin-bottom: -210px;
+    align-content: center;
+    object-fit: contain;
+}
+
+.emoji{
+    z-index:0;
+    position: relative;
+    margin-left: 5%;
+}
